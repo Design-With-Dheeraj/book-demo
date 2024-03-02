@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fontFamily);
+}
+
+:root{
+    --primary-color-white: #FBFFF4;
+    --primary-color-blue: #0000E3;
+    --primary-color-red: #ff0000;
+    --card-bg: #ffffff;
+    --secondary-text-color: #626262;
+    --fontFamily: "Poppins", sans-serif;
+}
+
+
+@font-face {
+    font-family: "brush-script";
+    src: url(assets/font/BRUSHSCI.TTF);
+}
+
+
+body,
+html{
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--primary-color-white);
+    position: relative;
+}
+
+main{
+    max-width: 1440px;
+    height: auto;
+
+    margin: 0 auto;
+    padding: 0 20px;  
+    
+    position: relative;
+}
+
+nav{
+    padding: 20px;
+}
+
+.headContain{
+    text-align: center;
+}
+
+.headContain .bodyHead{
+    font: 600 48px var(--fontFamily);
+    letter-spacing: -2px;
+}
+
+.bodyHead span{
+    font: 58px "brush-script";
+    color: var(--primary-color-blue);
+}
+
+.headContain p{
+    width: 80%;
+    margin: 0 auto;
+    font: 400 16px var(--fontFamily);
+    color: var(--secondary-text-color);
+}
+
+
+
+
+.courseCard-contain{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+
+    padding: 50px 20px;
+}
+
+
+.courseCard{
+    width: 310px;
+    height: auto;
+
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    
+    padding: 14px;
+    overflow: hidden;
+
+    box-shadow: 4px 4px 20px rgba(150, 150, 150, 0.1);
+    transition: 0.3s;
+}
+
+.courseCard:hover{
+    transform: scale(1.1);
+}
+
+.courseCard .courseImg img{
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(100, 100, 100, 0.1);
+}
+
+.courseCard .courseContent{
+    margin: 20px 0 20px;
+    position: relative;
+}
+
+.courseContent::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -10px;
+
+    width: 100px;
+    height: 3px;
+
+    background-color: var(--primary-color-red);
+    border-radius: 35px;
+}
+
+.courseContent .courseTitle{
+    font: 600 22px var(--fontFamily);
+}
+
+.courseContent .courseRating{
+    display: flex;
+    align-items: center;
+
+    font: 500 14px var(--fontFamily);
+    color: var(--secondary-text-color);
+}
+
+.courseCard .book-btn{
+    padding: 8px 32px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+    font: 600 14px var(--fontFamily);
+    border-radius: 6px;
+    border: 1px solid var(--primary-color-blue);
+    background-color: var(--primary-color-blue);
+
+    color: var(--card-bg);
+    cursor: pointer;
+}
+
+.book-btn img{
+    width: 24px;
+    margin-left: 16px;
+    transition: .2s;
+}
+
+.book-btn:hover img{
+    transform: translateX(10px);
+}
+
+
+
+
+
+
+
+
+/* Booke Demo Class Form Style */
+.fade{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(50, 50, 50, 0.9);
+
+    display: none;
+}
+
+.formImg, .bookClass-form{
+    width: 100%;
+}
+
+.bookClass-form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 420px;
+    height: auto;
+    
+    background-color: var(--card-bg);
+    padding: 20px 30px;
+    border-radius: 16px;
+
+    display: none;
+}
+
+.formContain .formImg{
+    width: 100%;
+    height: auto;
+}
+
+.bookClass-form .form-head{
+    font: 600 24px var(--fontFamily);
+}
+
+.input-bx-contain{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.input-box{
+    margin-top: 8px;
+}
+
+.input-box label{
+    font: 500 16px var(--fontFamily);
+    padding-left: 30px;
+    position: relative;
+}
+
+.input-box label::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 2px;
+
+    background-color: var(--primary-color-red);
+    border-radius: 35px;
+}
+
+.input-box input{
+    margin-top: 2px;
+    width: 100%;
+    padding: 12px;
+
+    border-radius: 6px;
+    border: 2px solid rgb(200, 200, 200);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.inputError{
+    font: 400 14px var(--fontFamily);
+    color: var(--primary-color-red);
+
+    display: none;
+}
+
+select{
+    width: 100%;
+    height: 50px;
+
+    padding: 0 10px;
+    margin: 12px 0;
+    border-radius: 4px;
+    border: 2px solid rgb(200, 200, 200);
+
+    font: 500 14px var(--fontFamily);
+}
+
+select option{
+    font: 500 14px var(--fontFamily);
+}
+
+.submitForm-btn{
+    width: 100%;
+    padding: 12px 0;
+
+    font: 600 16px var(--fontFamily);
+
+    border-radius: 8px;
+    background-color: var(--primary-color-blue);
+    border: none;
+    color: var(--card-bg);
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitForm-btn img{
+    width: 18px;
+    height: auto;
+
+    margin-left: 6px;
+}
+
+
+.formClose-btn{
+    position: absolute;
+    top: -45px;
+    right: 0px;
+
+    width: 100px;
+    height: 40px;
+
+    border-radius: 6px;
+    background-color: var(--card-bg);
+
+    font: 600 14px var(--fontFamily);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.formClose-btn img{
+    width: 10px;
+    height: auto;
+    margin-left: 5px;
+}
+
+
+/* ---- Splin Loader ---- */
+
+.loaderContain{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+
+    display: none;
+}
+
+.spinner {
+    position: relative;
+    width: 22.4px;
+    height: 22.4px;
+ }
+ 
+ .spinner::before,
+ .spinner::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    animation: spinner-b4c8mmmd 0.5s backwards, spinner-49opz7md 1.25s 0.5s infinite ease;
+    border: 5.6px solid var(--primary-color-red);
+    border-radius: 50%;
+    box-shadow: 0 -33.6px 0 -5.6px var(--primary-color-red);
+    position: absolute;
+ }
+ 
+ .spinner::after {
+    animation-delay: 0s, 1.25s;
+ }
+ 
+ @keyframes spinner-b4c8mmmd {
+    from {
+       box-shadow: 0 0 0 -5.6px var(--primary-color-red);
+    }
+ }
+ 
+ @keyframes spinner-49opz7md {
+    to {
+       transform: rotate(360deg);
+    }
+ }

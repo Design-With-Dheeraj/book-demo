@@ -1,0 +1,61 @@
+@media screen and (max-width: 768px) {
+    nav{
+        padding: 20px 0;
+    }
+
+    nav img{
+        width: 150px;
+        height: auto;
+    }
+
+    .headContain .bodyHead{
+        font: 600 38px var(--fontFamily);
+        letter-spacing: -2px;
+    }
+
+    .bodyHead span{
+        font: 48px "brush-script";
+        padding: 0 6px;
+    }
+
+    .headContain p{
+        width: 100%;
+        font: 400 14px var(--fontFamily);
+    }
+}
+
+@media screen and (max-width: 480px){
+    .headContain .bodyHead{
+        font: 600 32px var(--fontFamily);
+        line-height: 30px;
+    }
+
+    .bodyHead span{
+        font: 42px "brush-script";
+        padding: 0 6px;
+    }
+
+    .headContain p{
+        margin: 10px;
+    }
+
+    .courseCard-contain{
+        gap: 40px 0;
+        padding: 20px 0 30px;
+    }
+
+    .courseCard{
+        width: 100%;
+    }
+
+    .courseCard:hover{
+        transform: scale(1);
+    }
+
+
+    /* Demo Form */
+    .bookClass-form{
+        width: 90%;
+        padding: 20px;
+    }
+}

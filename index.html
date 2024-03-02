@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Free Demo Class</title>
+
+    <!-- StyleSheet Link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+</head>
+<body>
+
+    <main>
+        <nav>
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo">
+            </div>
+        </nav>
+        <section class="container">
+            <div class="headContain">
+                <div class="bodyHead">Book <span>Free</span> Demo Class</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum dignissimos repudiandae corporis placeat aliquam quis accusantium deserunt, illum atque illo minima animi itaque et, nam est? Nam voluptatem facilis, vero iste quasi exercitationem iusto dolorum saepe id aperiam? Architecto.</p>
+            </div>
+            <div class="courseCard-contain">
+                <div class="courseCard">
+                    <div class="courseImg"><img src="assets/images/excel-crs-img.jpg" alt="Excel Course Image"></div>
+                    <div class="courseContent">
+                        <div class="courseTitle">Advanced Excel</div>
+                        <div class="courseRating"><img src="assets/images/star-img.png" alt="Rating Star">4.7 Ratings</div>
+                    </div>
+                    <button onclick="openDemoForm('Advanced Excel')" class="book-btn">Book Now <img src="assets/images/right-arrow.png" alt="Arrow Icon"></button>
+                </div>
+                
+                <div class="courseCard">
+                    <div class="courseImg"><img src="assets/images/excel-crs-img.jpg" alt="Excel Course Image"></div>
+                    <div class="courseContent">
+                        <div class="courseTitle">VBA Macros</div>
+                        <div class="courseRating"><img src="assets/images/star-img.png" alt="Rating Star">4.7 Ratings</div>
+                    </div>
+                    <button onclick="openDemoForm('VBA Macros')" class="book-btn">Book Now <img src="assets/images/right-arrow.png" alt="Arrow Icon"></button>
+                </div>
+                
+                <div class="courseCard">
+                    <div class="courseImg"><img src="assets/images/excel-crs-img.jpg" alt="Excel Course Image"></div>
+                    <div class="courseContent">
+                        <div class="courseTitle">Power Query</div>
+                        <div class="courseRating"><img src="assets/images/star-img.png" alt="Rating Star">4.7 Ratings</div>
+                    </div>
+                    <button onclick="openDemoForm('Power Query')" class="book-btn">Book Now <img src="assets/images/right-arrow.png" alt="Arrow Icon"></button>
+                </div>
+                
+                <div class="courseCard">
+                    <div class="courseImg"><img src="assets/images/excel-crs-img.jpg" alt="Excel Course Image"></div>
+                    <div class="courseContent">
+                        <div class="courseTitle">DAX</div>
+                        <div class="courseRating"><img src="assets/images/star-img.png" alt="Rating Star">4.7 Ratings</div>
+                    </div>
+                    <button onclick="openDemoForm('DAX')" class="book-btn">Book Now <img src="assets/images/right-arrow.png" alt="Arrow Icon"></button>
+                </div>
+                
+                <div class="courseCard">
+                    <div class="courseImg"><img src="assets/images/excel-crs-img.jpg" alt="Excel Course Image"></div>
+                    <div class="courseContent">
+                        <div class="courseTitle">Power BI</div>
+                        <div class="courseRating"><img src="assets/images/star-img.png" alt="Rating Star">4.7 Ratings</div>
+                    </div>
+                    <button onclick="openDemoForm('Power BI')" class="book-btn">Book Now <img src="assets/images/right-arrow.png" alt="Arrow Icon"></button>
+                </div>
+                
+                <div class="courseCard">
+                    <div class="courseImg"><img src="assets/images/excel-crs-img.jpg" alt="Excel Course Image"></div>
+                    <div class="courseContent">
+                        <div class="courseTitle">SQL Server</div>
+                        <div class="courseRating"><img src="assets/images/star-img.png" alt="Rating Star">4.7 Ratings</div>
+                    </div>
+                    <button onclick="openDemoForm('SQL Server')" class="book-btn">Book Now <img src="assets/images/right-arrow.png" alt="Arrow Icon"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="fade" id="overlay"></div>
+    <form id="demoForm" action="" method="POST" name="contact-form" class="bookClass-form">
+        <div class="form-head">Book Demo Class</div>
+    
+        <div class="input-bx-contain">
+            <div class="input-box">
+                <label for="name">Name</label><br>
+                <input type="text" name="Name" id="nameInput" required placeholder="Enter Name Here">
+            </div>
+            <div class="input-box">
+                <label for="phone">Contact</label><br>
+                <input type="number" name="Phone" id="phoneInput" placeholder="Enter Contact Number Here">
+            </div>
+        </div>
+        <div class="inputError" id="contactError">Please enter a valid phone number.</div>
+        <div class="input-box">
+            <label for="email">Email</label><br>
+            <input type="email" name="Email" id="emailInput" placeholder="Enter Email Here">
+        </div>
+        <div class="inputError" id="mailError">Please enter a valid email.</div>
+        <div class="input-box">
+            <label for="qualification">Last Qualification</label><br>
+            <input type="qualification" name="Qualification" id="qualInput" required placeholder="Enter Your Last Qualification">
+        </div>
+        <div class="input-bx-contain">
+            <div class="input-box">
+                <label for="occupation">Occupation</label><br>
+                <input type="occupation" name="Occupation" id="occupInput" required placeholder="Enter Occupation Here">
+            </div>
+            <div class="input-box">
+                <label for="remarks">Remarks</label><br>
+                <input type="remarks" name="Remarks" id="remarkInput" required placeholder="Enter Remarks Here">
+            </div>
+        </div>
+
+        <select id="course" name="Course" required>
+            <option value="Advanced Excel">Advanced Excel</option>
+            <option value="VBA Macros">VBA Macros</option>
+            <option value="Power Query">Power Query</option>
+            <option value="DAX">DAX</option>
+            <option value="Power BI">Power BI</option>
+            <option value="SQL Server">SQL Server</option>
+         </select><br>
+
+        <button type="submit" class="submitForm-btn" id="formSubmit">Submit <img src="assets/images/tick.png" alt="Tick Icon"/></button>
+
+        <div class="formClose-btn" id="formClose">
+            Close<img src="assets/images/close-icon.png" alt="Close Icon">
+        </div>
+    </form>
+
+    <div class="loaderContain" id="loadingSpinner">
+        <div class="spinner"></div>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
