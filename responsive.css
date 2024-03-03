@@ -3,8 +3,16 @@
         padding: 20px 0;
     }
 
+    .nav-head{
+        font: 500 16px var(--fontFamily);
+    }
+    
+    .nav-head span{
+        font: 26px "brush-script";
+    }
+
     nav img{
-        width: 150px;
+        width: 120px;
         height: auto;
     }
 
@@ -25,6 +33,29 @@
 }
 
 @media screen and (max-width: 480px){
+    nav{
+        gap: 0 40px;
+    }
+
+    .nav-head{
+        font: 500 14px var(--fontFamily);
+        line-height: 15px;
+    }
+    
+    .nav-head span{
+        font: 20px "brush-script";
+        line-height: 26px;
+    }
+
+    .nav-head::after{
+        width: 60%;
+    }
+
+    nav img{
+        width: 100px;
+        height: auto;
+    }
+    
     .headContain .bodyHead{
         font: 600 32px var(--fontFamily);
         line-height: 30px;
