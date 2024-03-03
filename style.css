@@ -44,6 +44,37 @@ main{
 
 nav{
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* border: 1px solid red; */
+}
+
+.nav-head{
+    font: 500 18px var(--fontFamily);
+    text-transform: capitalize;
+    letter-spacing: -0.5px;
+    text-align: right;
+
+    position: relative;
+}
+
+.nav-head::after{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+
+    width: 160px;
+    height: 1px;
+
+    background-color: var(--primary-color-blue);
+}
+
+.nav-head span{
+    font: 28px "brush-script";
+    color: var(--primary-color-red);
 }
 
 .headContain{
@@ -135,6 +166,12 @@ nav{
 
     font: 500 14px var(--fontFamily);
     color: var(--secondary-text-color);
+}
+
+.courseRating img{
+    width: 70px;
+    height: auto;
+    margin-right: 5px;
 }
 
 .courseCard .book-btn{
