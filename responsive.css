@@ -55,7 +55,8 @@
         width: 100px;
         height: auto;
     }
-    
+
+
     .headContain .bodyHead{
         font: 600 32px var(--fontFamily);
         line-height: 30px;
@@ -88,5 +89,6 @@
     .bookClass-form{
         width: 90%;
         padding: 20px;
+        transform: translate(-50%, -50%) scale(0.9);
     }
 }
