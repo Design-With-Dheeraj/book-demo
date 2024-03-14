@@ -13,7 +13,11 @@ formClose.addEventListener("click", ()=>{
   document.getElementById("overlay").style.display = "none";
 })
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyh4_S2xCjTPKKDUqk2SbbAA4om5e_AS8Lzb46e4QR4P3qnBjkhvjKSRR_R8stkAJAI/exec';
+
+// Google Sheet Script URL -------------->
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzXYuLpiikpiedt9s0Y5sC1u0s-dSkp6eWjChEP5v_WzlXxCbwjgcdVtnwwe749v-y4Xw/exec';
+
+
 
 const form = document.forms['contact-form'];
 const phoneInput = document.getElementById('phoneInput');
