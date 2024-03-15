@@ -214,30 +214,38 @@ nav{
 
     display: none;
 }
-/* 
-.formImg, .bookClass-form{
-    width: 100%;
-} */
 
 .bookClass-form{
     position: fixed;
     top: 52%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%);
 
     width: 420px;
-    height: auto;
+    max-height: 80%;
+    overflow-y: auto;
     
     background-color: var(--card-bg);
     padding: 20px 30px;
     border-radius: 16px;
 
     display: none;
+    z-index: 1;
+}
+
+.bookClass-form::-webkit-scrollbar {
+    display: none;
 }
 
 .formContain .formImg{
     width: 100%;
     height: auto;
+}
+
+.bookClass-form .form-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .bookClass-form .form-head{
@@ -260,11 +268,16 @@ nav{
 
 .input-box label{
     font: 500 16px var(--fontFamily);
-    padding-left: 30px;
+    /* padding-left: 30px; */
     position: relative;
 }
 
-.input-box label::before{
+.input-box label sup{
+    color: red;
+    font-size: 16px;
+}
+
+/* .input-box label::before{
     content: "";
     position: absolute;
     left: 0;
@@ -276,7 +289,7 @@ nav{
 
     background-color: var(--primary-color-red);
     border-radius: 35px;
-}
+} */
 
 .input-box input{
     margin-top: 2px;
@@ -356,15 +369,11 @@ select option{
 
 
 .formClose-btn{
-    position: absolute;
-    top: -45px;
-    right: 0px;
-
-    width: 100px;
+    width: 40px;
     height: 40px;
 
-    border-radius: 6px;
-    background-color: var(--card-bg);
+    border-radius: 50%;
+    background-color: var(--primary-color-blue);
 
     font: 600 14px var(--fontFamily);
     display: flex;
@@ -375,9 +384,8 @@ select option{
 }
 
 .formClose-btn img{
-    width: 10px;
+    width: 20px;
     height: auto;
-    margin-left: 5px;
 }
 
 
