@@ -84,32 +84,37 @@
 
     <div class="fade" id="overlay"></div>
     <form id="demoForm" action="" method="POST" name="contact-form" class="bookClass-form">
-        <div class="form-head">Book Demo Class</div>
+        <div class="form-top">
+            <div class="form-head">Book Demo Class</div>
+            <div class="formClose-btn" id="formClose">
+                <img src="assets/images/close-icon.png" alt="Close Icon">
+            </div>
+        </div>
     
-        <div class="input-bx-contain">
+        <!-- <div class="input-bx-contain"> -->
             <div class="input-box">
-                <label for="name">Name</label><br>
+                <label for="name">Name <sup>*</sup></label><br>
                 <input type="text" name="Name" id="nameInput" required placeholder="Enter Name Here">
             </div>
             <div class="input-box">
-                <label for="phone">Contact</label><br>
+                <label for="phone">Contact <sup>*</sup></label><br>
                 <input type="number" name="Phone" id="phoneInput" placeholder="Enter Contact Number Here">
             </div>
-        </div>
+        <!-- </div> -->
         <div class="inputError" id="contactError">Please enter a valid phone number.</div>
         <div class="input-box">
-            <label for="email">Email</label><br>
+            <label for="email">Email <sup>*</sup></label><br>
             <input type="email" name="Email" id="emailInput" placeholder="Enter Email Here">
         </div>
         <div class="inputError" id="mailError">Please enter a valid email.</div>
         <div class="input-box">
-            <label for="qualification">Last Qualification</label><br>
+            <label for="qualification">Qualification <sup>*</sup></label><br>
             <input type="qualification" name="Qualification" id="qualInput" required placeholder="Enter Your Last Qualification">
         </div>
         <!-- <div class="input-bx-contain"> -->
             <div class="input-box">
                 <label for="occupation">Occupation</label><br>
-                <input type="occupation" name="Occupation" id="occupInput" required placeholder="Enter Occupation Here">
+                <input type="occupation" name="Occupation" id="occupInput" placeholder="Enter Occupation Here">
             </div>
             <div class="input-box">
                 <label for="remarks">Remarks</label><br>
@@ -128,10 +133,6 @@
          </select><br>
 
         <button type="submit" class="submitForm-btn" id="formSubmit">Submit <img src="assets/images/tick.png" alt="Tick Icon"/></button>
-
-        <div class="formClose-btn" id="formClose">
-            Close<img src="assets/images/close-icon.png" alt="Close Icon">
-        </div>
     </form>
 
     <div class="loaderContain" id="loadingSpinner">
